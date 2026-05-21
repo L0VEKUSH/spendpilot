@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 export function SavingsPreview() {
   const examples = [
     {
@@ -89,9 +91,11 @@ export function SavingsPreview() {
           <p className="text-slate-600 mb-4">
             These are real metrics from our audit engine
           </p>
-          <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-            Start Your Audit
-          </button>
+          <Link href="/audit">
+            <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+              Start Your Audit
+            </button>
+          </Link>
         </div>
       </div>
     </section>

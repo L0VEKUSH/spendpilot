@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 export function Hero() {
@@ -35,19 +36,23 @@ export function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-          <Button
-            size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-          >
-            Audit My Stack Free
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-2 border-slate-300 text-slate-900 hover:border-blue-600 hover:bg-blue-50 text-lg px-8 py-6 rounded-lg transition-all duration-300"
-          >
-            See Sample Audit
-          </Button>
+          <Link href="/audit">
+            <Button
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            >
+              Audit My Stack Free
+            </Button>
+          </Link>
+          <Link href="/results-demo">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-2 border-slate-300 text-slate-900 hover:border-blue-600 hover:bg-blue-50 text-lg px-8 py-6 rounded-lg transition-all duration-300"
+            >
+              See Sample Audit
+            </Button>
+          </Link>
         </div>
 
         {/* Trust indicator */}
